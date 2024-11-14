@@ -65,7 +65,7 @@ elif command -v dnf >/dev/null 2>&1; then
 		fi
 	fi
 	if [ "${INSTALL_IPTABLES}" = 1 ] && [ ! -e /usr/sbin/iptables ]; then
-		pkgs="${pkgs} iptables"
+		pkgs="${pkgs} iptables-nft"
 	fi
 	if [ "${LIMA_CIDATA_CONTAINERD_USER}" = 1 ]; then
 		if ! command -v newuidmap >/dev/null 2>&1; then
